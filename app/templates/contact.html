@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+
+    {% block css %} {% endblock%}
+ 
+        {% include "header.html" %}
+   
+            {% block main %}
+            
+            <h1>Contact Form</h1>
+            <hr/>
+            Fill in this form to contact the site owners.
+            
+            <!--form for the app-->
+            <form method="POST" name="register_form" id="Form">
+                
+                {{ form.csrf_token }}
+                <br/>
+                
+            
+                <h5>{{ form.name.label }}
+                    <label class="required">{Required}</label>
+                </h5>
+                Please enter your full name<br/>
+                {{ form.name(size=50) }}
+
+               
+                <h5>{{ form.email.label }}
+                    <label class="required">{Required}</label>
+                </h5>
+                Please enter your e-mail address<br/>
+                {{ form.email(size=50) }}
+
+                <h5>{{ form.subject.label }}
+                    <label class="required">{Required}</label>
+                </h5>
+                Please enter the subject of your message<br/>
+                {{ form.subject(size=50) }}
+
+                
+                <h5>{{ form.text_body.label }}
+                    <label class="required">{Required}</label>
+                </h5>
+
+				<h5>
+                Please enter the message you would like to send<br/>
+                {{ form.text_body(size=50) }}
+                </h5>
+				
+                <button type="submit" class="button">Send</button>
+            </form>
+            
+            {% endblock %}
+     

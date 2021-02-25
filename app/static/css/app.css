@@ -1,3 +1,23 @@
 body {
     padding-top: 5rem;
 }
+
+.flashes {
+    font-style: none;
+}
+
+.category .flash li{
+    font-size: 20px;
+    color: rgb(255, 47, 168);
+}
+
+.required {
+    color: red;
+}
+
+.button {
+    border-color: rgb(76, 152, 175);
+    border-radius: 4px;
+    background-color:rgb(76, 152, 175);
+    color:white;
+}
